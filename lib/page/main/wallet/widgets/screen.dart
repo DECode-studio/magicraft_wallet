@@ -109,9 +109,9 @@ Widget actionBar(
                     borderColor: white,
                   ),
                   circleButtonIcon(
-                    onClick: () => controller.actionMethod(mode: 'other'),
-                    icon: HugeIcons.strokeRoundedDashboardSquare03,
-                    text: 'Others',
+                    onClick: () => controller.actionMethod(mode: 'bookmark'),
+                    icon: HugeIcons.strokeRoundedBookmark03,
+                    text: 'Bookmark',
                     isBorder: true,
                     color: transparent,
                     iconColor: thirdColor_1,

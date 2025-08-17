@@ -89,6 +89,10 @@ class WalletFragmentController extends GetxController {
       accountModal();
     }
 
+    if (mode == 'bookmark') {
+      Get.toNamed(Screen.BOOKMARK_PAGE_ROUTE);
+    }
+
     if (mode == 'other') {
       Get.toNamed(Screen.OTHER_PAGE_ROUTE);
     }
