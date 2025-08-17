@@ -1,4 +1,4 @@
-package id.excitech.dompet_ku
+package com.magicraft.magicraft_wallet
 
 import io.flutter.embedding.android.FlutterActivity
 

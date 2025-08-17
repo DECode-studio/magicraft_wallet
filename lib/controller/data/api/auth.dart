@@ -1,13 +1,13 @@
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/controller/service/ethereum.dart';
-import 'package:dompet_ku/model/api/main.dart';
-import 'package:dompet_ku/model/api/request/verivy.dart';
-import 'package:dompet_ku/model/api/response/verivy.dart';
-import 'package:dompet_ku/service/config/api.dart';
-import 'package:dompet_ku/service/formater/date.dart';
-import 'package:dompet_ku/service/function/http_request.dart';
-import 'package:dompet_ku/service/function/log.dart';
-import 'package:dompet_ku/service/value/encrypt.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/controller/service/ethereum.dart';
+import 'package:magicraft_wallet/model/api/main.dart';
+import 'package:magicraft_wallet/model/api/request/verivy.dart';
+import 'package:magicraft_wallet/model/api/response/verivy.dart';
+import 'package:magicraft_wallet/service/config/api.dart';
+import 'package:magicraft_wallet/service/formater/date.dart';
+import 'package:magicraft_wallet/service/function/http_request.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
+import 'package:magicraft_wallet/service/value/encrypt.dart';
 
 class AuthDataController extends HttpRequest {
   final authApp = AuthAppController();

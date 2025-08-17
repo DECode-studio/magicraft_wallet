@@ -1,7 +1,7 @@
-import 'package:dompet_ku/controller/page/detail/other.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/widget/button/button_icon.dart';
-import 'package:dompet_ku/widget/load/load.dart';
+import 'package:magicraft_wallet/controller/page/detail/other.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/widget/button/button_icon.dart';
+import 'package:magicraft_wallet/widget/load/load.dart';
 import 'package:flutter/material.dart';
 
 import 'menu.dart';

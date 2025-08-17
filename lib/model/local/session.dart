@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:dompet_ku/model/api/response/network.dart';
-import 'package:dompet_ku/service/value/guard.dart';
+import 'package:magicraft_wallet/model/api/response/network.dart';
+import 'package:magicraft_wallet/service/value/guard.dart';
 
 class LocalNetworkModel {
   String? network;

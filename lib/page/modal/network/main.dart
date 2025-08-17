@@ -1,5 +1,5 @@
-import 'package:dompet_ku/controller/page/modal/network.dart';
-import 'package:dompet_ku/style/color.dart';
+import 'package:magicraft_wallet/controller/page/modal/network.dart';
+import 'package:magicraft_wallet/style/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

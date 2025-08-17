@@ -1,9 +1,9 @@
-import 'package:dompet_ku/controller/page/main/history.dart';
-import 'package:dompet_ku/model/api/response/history.dart';
-import 'package:dompet_ku/service/formater/date.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/widget/data/text_data.dart';
+import 'package:magicraft_wallet/controller/page/main/history.dart';
+import 'package:magicraft_wallet/model/api/response/history.dart';
+import 'package:magicraft_wallet/service/formater/date.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/widget/data/text_data.dart';
 import 'package:flutter/material.dart';
 
 Widget cardData(

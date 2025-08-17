@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/service/function/http_request.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/service/function/http_request.dart';
 
 class EthDataController extends HttpRequest {
   final authApp = AuthAppController();

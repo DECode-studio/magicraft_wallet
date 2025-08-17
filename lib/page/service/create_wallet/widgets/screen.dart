@@ -1,5 +1,5 @@
-import 'package:dompet_ku/controller/page/service/create_wallet.dart';
-import 'package:dompet_ku/widget/load/load.dart';
+import 'package:magicraft_wallet/controller/page/service/create_wallet.dart';
+import 'package:magicraft_wallet/widget/load/load.dart';
 import 'package:flutter/material.dart';
 
 import '../view/confirmation.dart';

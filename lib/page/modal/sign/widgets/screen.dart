@@ -1,8 +1,8 @@
-import 'package:dompet_ku/controller/page/modal/sign.dart';
-import 'package:dompet_ku/service/enum/wallet.dart';
-import 'package:dompet_ku/service/value/wallet.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/widget/load/load.dart';
+import 'package:magicraft_wallet/controller/page/modal/sign.dart';
+import 'package:magicraft_wallet/service/enum/wallet.dart';
+import 'package:magicraft_wallet/service/value/wallet.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/widget/load/load.dart';
 import 'package:flutter/material.dart';
 
 import 'action.dart';

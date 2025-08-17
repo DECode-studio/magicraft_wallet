@@ -1,6 +1,6 @@
-import 'package:dompet_ku/controller/page/main/wallet.dart';
-import 'package:dompet_ku/style/box.dart';
-import 'package:dompet_ku/style/color.dart';
+import 'package:magicraft_wallet/controller/page/main/wallet.dart';
+import 'package:magicraft_wallet/style/box.dart';
+import 'package:magicraft_wallet/style/color.dart';
 import 'package:flutter/material.dart';
 
 Widget dragAction(

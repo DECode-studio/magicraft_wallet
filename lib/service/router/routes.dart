@@ -1,16 +1,16 @@
-import 'package:dompet_ku/page/detail/account/main.dart';
-import 'package:dompet_ku/page/detail/bookmark/main.dart';
-import 'package:dompet_ku/page/detail/nft/main.dart';
-import 'package:dompet_ku/page/detail/other/main.dart';
-import 'package:dompet_ku/page/detail/send/main.dart';
-import 'package:dompet_ku/page/detail/token/main.dart';
-import 'package:dompet_ku/page/main/main.dart';
-import 'package:dompet_ku/page/service/auth/main.dart';
-import 'package:dompet_ku/page/service/create_wallet/main.dart';
-import 'package:dompet_ku/page/service/import_wallet/main.dart';
-import 'package:dompet_ku/page/service/info/main.dart';
+import 'package:magicraft_wallet/page/detail/account/main.dart';
+import 'package:magicraft_wallet/page/detail/bookmark/main.dart';
+import 'package:magicraft_wallet/page/detail/nft/main.dart';
+import 'package:magicraft_wallet/page/detail/other/main.dart';
+import 'package:magicraft_wallet/page/detail/send/main.dart';
+import 'package:magicraft_wallet/page/detail/token/main.dart';
+import 'package:magicraft_wallet/page/main/main.dart';
+import 'package:magicraft_wallet/page/service/auth/main.dart';
+import 'package:magicraft_wallet/page/service/create_wallet/main.dart';
+import 'package:magicraft_wallet/page/service/import_wallet/main.dart';
+import 'package:magicraft_wallet/page/service/info/main.dart';
 import 'package:get/get.dart';
-import 'package:dompet_ku/page/service/splash/main.dart';
+import 'package:magicraft_wallet/page/service/splash/main.dart';
 
 var appRoutes = <GetPage>[
   // Service Page

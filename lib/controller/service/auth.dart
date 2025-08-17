@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:dompet_ku/model/api/response/network.dart';
-import 'package:dompet_ku/model/local/session.dart';
-import 'package:dompet_ku/service/function/log.dart';
-import 'package:dompet_ku/service/value/encrypt.dart';
+import 'package:magicraft_wallet/model/api/response/network.dart';
+import 'package:magicraft_wallet/model/local/session.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
+import 'package:magicraft_wallet/service/value/encrypt.dart';
 import 'package:get_storage/get_storage.dart';
 
 class AuthAppController {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:dompet_ku/service/enum/wallet.dart';
-import 'package:dompet_ku/service/value/guard.dart';
+import 'package:magicraft_wallet/service/enum/wallet.dart';
+import 'package:magicraft_wallet/service/value/guard.dart';
 
 class WalletRequestModel {
   String? chainId;

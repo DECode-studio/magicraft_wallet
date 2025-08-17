@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:dompet_ku/service/value/guard.dart';
+import 'package:magicraft_wallet/service/value/guard.dart';
 
 class ApiResponse<T> {
   StatusModel? status;

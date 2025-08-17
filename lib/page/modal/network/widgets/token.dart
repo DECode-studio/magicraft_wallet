@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dompet_ku/controller/page/modal/network.dart';
-import 'package:dompet_ku/model/api/response/network.dart';
-import 'package:dompet_ku/style/box.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/widget/load/load.dart';
+import 'package:magicraft_wallet/controller/page/modal/network.dart';
+import 'package:magicraft_wallet/model/api/response/network.dart';
+import 'package:magicraft_wallet/style/box.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/widget/load/load.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 

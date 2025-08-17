@@ -1,4 +1,4 @@
-# dompet_ku
+# magicraft_wallet
 
 A new Flutter project.
 

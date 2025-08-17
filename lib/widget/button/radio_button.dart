@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:dompet_ku/model/local/radio_option.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
+import 'package:magicraft_wallet/model/local/radio_option.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
 
 Widget radioButton({
   required List<RadioOption> options,

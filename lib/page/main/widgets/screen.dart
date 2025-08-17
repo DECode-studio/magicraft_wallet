@@ -1,5 +1,5 @@
-import 'package:dompet_ku/controller/page/main/main.dart';
-import 'package:dompet_ku/widget/assets/background.dart';
+import 'package:magicraft_wallet/controller/page/main/main.dart';
+import 'package:magicraft_wallet/widget/assets/background.dart';
 import 'package:flutter/material.dart';
 
 import '../history/main.dart';

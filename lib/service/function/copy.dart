@@ -1,5 +1,5 @@
 import 'package:clipboard/clipboard.dart';
-import 'package:dompet_ku/widget/message/toast.dart';
+import 'package:magicraft_wallet/widget/message/toast.dart';
 
 Future<void> copyText({
   required String data,

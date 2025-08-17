@@ -1,5 +1,5 @@
-import 'package:dompet_ku/controller/page/modal/bookmark.dart';
-import 'package:dompet_ku/widget/load/load.dart';
+import 'package:magicraft_wallet/controller/page/modal/bookmark.dart';
+import 'package:magicraft_wallet/widget/load/load.dart';
 import 'package:flutter/material.dart';
 
 import '../view/create.dart';

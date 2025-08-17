@@ -1,18 +1,18 @@
 import 'dart:convert';
 
-import 'package:dompet_ku/controller/data/api/network.dart';
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/controller/service/ethereum.dart';
-import 'package:dompet_ku/model/local/session.dart';
-import 'package:dompet_ku/model/local/wallet_request.dart';
-import 'package:dompet_ku/page/modal/sign/main.dart';
-import 'package:dompet_ku/service/config/url.dart';
-import 'package:dompet_ku/service/config/wallet.dart';
-import 'package:dompet_ku/service/enum/wallet.dart';
-import 'package:dompet_ku/service/function/log.dart';
-import 'package:dompet_ku/service/value/encrypt.dart';
-import 'package:dompet_ku/service/value/wallet.dart';
-import 'package:dompet_ku/widget/message/toast.dart';
+import 'package:magicraft_wallet/controller/data/api/network.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/controller/service/ethereum.dart';
+import 'package:magicraft_wallet/model/local/session.dart';
+import 'package:magicraft_wallet/model/local/wallet_request.dart';
+import 'package:magicraft_wallet/page/modal/sign/main.dart';
+import 'package:magicraft_wallet/service/config/url.dart';
+import 'package:magicraft_wallet/service/config/wallet.dart';
+import 'package:magicraft_wallet/service/enum/wallet.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
+import 'package:magicraft_wallet/service/value/encrypt.dart';
+import 'package:magicraft_wallet/service/value/wallet.dart';
+import 'package:magicraft_wallet/widget/message/toast.dart';
 import 'package:hex/hex.dart';
 import 'package:reown_walletkit/reown_walletkit.dart';
 

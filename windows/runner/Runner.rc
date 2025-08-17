@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "id.excitech" "\0"
-            VALUE "FileDescription", "dompet_ku" "\0"
+            VALUE "FileDescription", "magicraft_wallet" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "dompet_ku" "\0"
+            VALUE "InternalName", "magicraft_wallet" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 id.excitech. All rights reserved." "\0"
-            VALUE "OriginalFilename", "dompet_ku.exe" "\0"
-            VALUE "ProductName", "dompet_ku" "\0"
+            VALUE "OriginalFilename", "magicraft_wallet.exe" "\0"
+            VALUE "ProductName", "magicraft_wallet" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

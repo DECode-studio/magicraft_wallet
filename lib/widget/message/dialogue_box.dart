@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:dompet_ku/service/router/navigator.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
+import 'package:magicraft_wallet/service/router/navigator.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
 
 void dialogueBox({
   required String title,

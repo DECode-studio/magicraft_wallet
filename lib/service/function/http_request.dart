@@ -1,5 +1,5 @@
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/service/value/encrypt.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/service/value/encrypt.dart';
 import 'package:http/http.dart';
 import 'package:universal_io/io.dart';
 

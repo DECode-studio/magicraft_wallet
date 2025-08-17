@@ -1,16 +1,16 @@
 import 'dart:async';
 
-import 'package:dompet_ku/controller/data/api/data.dart';
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/model/local/session.dart';
-import 'package:dompet_ku/page/modal/network/main.dart';
-import 'package:dompet_ku/service/function/copy.dart';
-import 'package:dompet_ku/service/function/interface.dart';
-import 'package:dompet_ku/service/router/navigator.dart';
-import 'package:dompet_ku/service/router/screen.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/widget/load/modal.dart';
-import 'package:dompet_ku/widget/message/dialogue_box.dart';
+import 'package:magicraft_wallet/controller/data/api/data.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/model/local/session.dart';
+import 'package:magicraft_wallet/page/modal/network/main.dart';
+import 'package:magicraft_wallet/service/function/copy.dart';
+import 'package:magicraft_wallet/service/function/interface.dart';
+import 'package:magicraft_wallet/service/router/navigator.dart';
+import 'package:magicraft_wallet/service/router/screen.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/widget/load/modal.dart';
+import 'package:magicraft_wallet/widget/message/dialogue_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hugeicons/hugeicons.dart';

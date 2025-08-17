@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:dompet_ku/model/local/dropdown.dart';
-import 'package:dompet_ku/style/box.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
+import 'package:magicraft_wallet/model/local/dropdown.dart';
+import 'package:magicraft_wallet/style/box.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
 
 // ignore: must_be_immutable, camel_case_types
 class customDropdown extends StatefulWidget {

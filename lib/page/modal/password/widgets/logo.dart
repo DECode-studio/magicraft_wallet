@@ -1,6 +1,6 @@
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/widget/assets/images.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/widget/assets/images.dart';
 import 'package:flutter/material.dart';
 
 Widget logoApp() => Column(

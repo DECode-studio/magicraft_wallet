@@ -1,6 +1,6 @@
 {
-    "name": "dompet_ku",
-    "short_name": "dompet_ku",
+    "name": "magicraft_wallet",
+    "short_name": "magicraft_wallet",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

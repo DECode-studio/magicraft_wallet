@@ -1,5 +1,5 @@
 import 'package:encrypt/encrypt.dart';
-import 'package:dompet_ku/service/function/log.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:uuid/uuid.dart';
 

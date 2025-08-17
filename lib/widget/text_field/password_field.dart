@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dompet_ku/style/box.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/style/text_box.dart';
+import 'package:magicraft_wallet/style/box.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/style/text_box.dart';
 
 // ignore_for_file: must_be_immutable
 

@@ -1,6 +1,6 @@
-import 'package:dompet_ku/controller/page/main/main.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/widget/message/toast.dart';
+import 'package:magicraft_wallet/controller/page/main/main.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/widget/message/toast.dart';
 import 'package:double_back_to_close/double_back_to_close.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

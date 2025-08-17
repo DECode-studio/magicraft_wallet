@@ -1,6 +1,6 @@
-import 'package:dompet_ku/controller/page/modal/sign.dart';
-import 'package:dompet_ku/model/local/wallet_request.dart';
-import 'package:dompet_ku/style/color.dart';
+import 'package:magicraft_wallet/controller/page/modal/sign.dart';
+import 'package:magicraft_wallet/model/local/wallet_request.dart';
+import 'package:magicraft_wallet/style/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

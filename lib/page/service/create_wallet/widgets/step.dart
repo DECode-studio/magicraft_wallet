@@ -1,6 +1,6 @@
-import 'package:dompet_ku/controller/page/service/create_wallet.dart';
-import 'package:dompet_ku/style/box.dart';
-import 'package:dompet_ku/style/color.dart';
+import 'package:magicraft_wallet/controller/page/service/create_wallet.dart';
+import 'package:magicraft_wallet/style/box.dart';
+import 'package:magicraft_wallet/style/color.dart';
 import 'package:easy_stepper/easy_stepper.dart';
 import 'package:flutter/material.dart';
 

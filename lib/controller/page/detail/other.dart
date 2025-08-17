@@ -1,9 +1,9 @@
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/service/function/interface.dart';
-import 'package:dompet_ku/service/router/navigator.dart';
-import 'package:dompet_ku/service/router/screen.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/widget/message/dialogue_box.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/service/function/interface.dart';
+import 'package:magicraft_wallet/service/router/navigator.dart';
+import 'package:magicraft_wallet/service/router/screen.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/widget/message/dialogue_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hugeicons/hugeicons.dart';

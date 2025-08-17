@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dompet_ku/style/text.dart';
+import 'package:magicraft_wallet/style/text.dart';
 
 Widget textDivider({
   required String text,

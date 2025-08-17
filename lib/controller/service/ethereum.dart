@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/service/function/log.dart';
-import 'package:dompet_ku/service/value/encrypt.dart';
-import 'package:dompet_ku/service/value/guard.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
+import 'package:magicraft_wallet/service/value/encrypt.dart';
+import 'package:magicraft_wallet/service/value/guard.dart';
 import 'package:hex/hex.dart';
 import 'package:http/http.dart';
 import 'package:reown_walletkit/reown_walletkit.dart';

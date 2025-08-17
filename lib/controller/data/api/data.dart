@@ -1,11 +1,11 @@
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/model/api/main.dart';
-import 'package:dompet_ku/model/api/request/web3.dart';
-import 'package:dompet_ku/model/api/response/asset.dart';
-import 'package:dompet_ku/model/api/response/history.dart';
-import 'package:dompet_ku/service/config/api.dart';
-import 'package:dompet_ku/service/function/http_request.dart';
-import 'package:dompet_ku/service/function/log.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/model/api/main.dart';
+import 'package:magicraft_wallet/model/api/request/web3.dart';
+import 'package:magicraft_wallet/model/api/response/asset.dart';
+import 'package:magicraft_wallet/model/api/response/history.dart';
+import 'package:magicraft_wallet/service/config/api.dart';
+import 'package:magicraft_wallet/service/function/http_request.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
 
 class Web3DataController extends HttpRequest {
   final authApp = AuthAppController();

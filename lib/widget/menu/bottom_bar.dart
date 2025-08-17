@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dompet_ku/style/color.dart';
+import 'package:magicraft_wallet/style/color.dart';
 
 class AnimatedBottomBarItem {
   final IconData icon;

@@ -1,4 +1,4 @@
-import 'package:dompet_ku/service/formater/date.dart';
+import 'package:magicraft_wallet/service/formater/date.dart';
 
 DateTime minuteOnlyBefore(DateTime date) {
   var time =

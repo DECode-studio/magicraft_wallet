@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:dompet_ku/service/function/log.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
 import 'package:universal_io/io.dart';
 
 Image imageFromBase64String(

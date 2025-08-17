@@ -1,11 +1,11 @@
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/model/api/main.dart';
-import 'package:dompet_ku/model/api/request/network.dart';
-import 'package:dompet_ku/model/api/response/network.dart';
-import 'package:dompet_ku/model/api/response/provider.dart';
-import 'package:dompet_ku/service/config/api.dart';
-import 'package:dompet_ku/service/function/http_request.dart';
-import 'package:dompet_ku/service/function/log.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/model/api/main.dart';
+import 'package:magicraft_wallet/model/api/request/network.dart';
+import 'package:magicraft_wallet/model/api/response/network.dart';
+import 'package:magicraft_wallet/model/api/response/provider.dart';
+import 'package:magicraft_wallet/service/config/api.dart';
+import 'package:magicraft_wallet/service/function/http_request.dart';
+import 'package:magicraft_wallet/service/function/log.dart';
 
 class NetworkDataController extends HttpRequest {
   Future<List<NetworkModel>> getListNeworks() async {

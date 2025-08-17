@@ -1,11 +1,11 @@
-import 'package:dompet_ku/controller/data/api/bookmark.dart';
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/model/api/request/bookmark.dart';
-import 'package:dompet_ku/model/api/response/bookmark.dart';
-import 'package:dompet_ku/page/modal/password/main.dart';
-import 'package:dompet_ku/service/router/navigator.dart';
-import 'package:dompet_ku/widget/load/modal.dart';
-import 'package:dompet_ku/widget/message/toast.dart';
+import 'package:magicraft_wallet/controller/data/api/bookmark.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/model/api/request/bookmark.dart';
+import 'package:magicraft_wallet/model/api/response/bookmark.dart';
+import 'package:magicraft_wallet/page/modal/password/main.dart';
+import 'package:magicraft_wallet/service/router/navigator.dart';
+import 'package:magicraft_wallet/widget/load/modal.dart';
+import 'package:magicraft_wallet/widget/message/toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

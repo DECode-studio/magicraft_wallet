@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dompet_ku/style/color.dart';
+import 'package:magicraft_wallet/style/color.dart';
 
 const titleToast = 'Dompet Ku Message';
 

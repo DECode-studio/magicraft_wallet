@@ -1,6 +1,6 @@
-import 'package:dompet_ku/controller/service/core.dart';
-import 'package:dompet_ku/service/function/scroll.dart';
-import 'package:dompet_ku/service/router/routes.dart';
+import 'package:magicraft_wallet/controller/service/core.dart';
+import 'package:magicraft_wallet/service/function/scroll.dart';
+import 'package:magicraft_wallet/service/router/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';

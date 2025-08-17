@@ -1,8 +1,8 @@
-import 'package:dompet_ku/controller/page/service/create_wallet.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/widget/button/check_box.dart';
-import 'package:dompet_ku/widget/text_field/password_field.dart';
+import 'package:magicraft_wallet/controller/page/service/create_wallet.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/widget/button/check_box.dart';
+import 'package:magicraft_wallet/widget/text_field/password_field.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 

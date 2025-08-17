@@ -1,7 +1,7 @@
-import 'package:dompet_ku/controller/page/detail/bookmark.dart';
-import 'package:dompet_ku/service/router/navigator.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
+import 'package:magicraft_wallet/controller/page/detail/bookmark.dart';
+import 'package:magicraft_wallet/service/router/navigator.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 

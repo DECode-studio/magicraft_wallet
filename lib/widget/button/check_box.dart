@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
 import 'package:flutter/material.dart';
 
 Widget checkBox({

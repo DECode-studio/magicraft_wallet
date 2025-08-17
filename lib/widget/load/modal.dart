@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:dompet_ku/widget/load/load.dart';
+import 'package:magicraft_wallet/widget/load/load.dart';
 
 loadModal() => Get.dialog(
       barrierDismissible: false,

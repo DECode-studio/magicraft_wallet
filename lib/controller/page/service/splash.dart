@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/controller/service/wallet.dart';
-import 'package:dompet_ku/page/modal/password/main.dart';
-import 'package:dompet_ku/service/function/interface.dart';
-import 'package:dompet_ku/service/router/screen.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/controller/service/wallet.dart';
+import 'package:magicraft_wallet/page/modal/password/main.dart';
+import 'package:magicraft_wallet/service/function/interface.dart';
+import 'package:magicraft_wallet/service/router/screen.dart';
 import 'package:get/get.dart';
 
 class SplashPageController extends GetxController {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/widget/assets/images.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/widget/assets/images.dart';
 
 Widget emptyData() => Column(
       mainAxisAlignment: MainAxisAlignment.center,

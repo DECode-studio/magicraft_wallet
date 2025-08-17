@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:dompet_ku/controller/data/api/data.dart';
-import 'package:dompet_ku/controller/service/auth.dart';
-import 'package:dompet_ku/model/api/response/asset.dart';
-import 'package:dompet_ku/model/local/session.dart';
-import 'package:dompet_ku/page/modal/account/main.dart';
-import 'package:dompet_ku/page/modal/network/main.dart';
-import 'package:dompet_ku/service/router/screen.dart';
+import 'package:magicraft_wallet/controller/data/api/data.dart';
+import 'package:magicraft_wallet/controller/service/auth.dart';
+import 'package:magicraft_wallet/model/api/response/asset.dart';
+import 'package:magicraft_wallet/model/local/session.dart';
+import 'package:magicraft_wallet/page/modal/account/main.dart';
+import 'package:magicraft_wallet/page/modal/network/main.dart';
+import 'package:magicraft_wallet/service/router/screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

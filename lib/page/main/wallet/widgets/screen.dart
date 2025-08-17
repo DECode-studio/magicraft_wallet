@@ -1,9 +1,9 @@
-import 'package:dompet_ku/controller/page/main/wallet.dart';
-import 'package:dompet_ku/page/main/wallet/widgets/network.dart';
-import 'package:dompet_ku/service/formater/balance.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
-import 'package:dompet_ku/widget/button/button_icon.dart';
+import 'package:magicraft_wallet/controller/page/main/wallet.dart';
+import 'package:magicraft_wallet/page/main/wallet/widgets/network.dart';
+import 'package:magicraft_wallet/service/formater/balance.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
+import 'package:magicraft_wallet/widget/button/button_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:snapping_sheet/snapping_sheet.dart';

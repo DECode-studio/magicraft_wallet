@@ -1,8 +1,8 @@
-import 'package:dompet_ku/controller/page/main/wallet.dart';
-import 'package:dompet_ku/page/main/wallet/view/nft.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/widget/button/tab.dart';
-import 'package:dompet_ku/widget/load/load.dart';
+import 'package:magicraft_wallet/controller/page/main/wallet.dart';
+import 'package:magicraft_wallet/page/main/wallet/view/nft.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/widget/button/tab.dart';
+import 'package:magicraft_wallet/widget/load/load.dart';
 import 'package:flutter/material.dart';
 
 import '../view/token.dart';

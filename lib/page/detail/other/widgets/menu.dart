@@ -1,4 +1,4 @@
-import 'package:dompet_ku/model/local/menu.dart';
+import 'package:magicraft_wallet/model/local/menu.dart';
 import 'package:hugeicons/hugeicons.dart';
 
 List<GridMenuItemModel> listMenu() => [

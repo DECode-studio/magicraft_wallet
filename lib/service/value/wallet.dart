@@ -1,6 +1,6 @@
 import 'package:decimal/decimal.dart';
-import 'package:dompet_ku/controller/service/wallet.dart';
-import 'package:dompet_ku/service/enum/wallet.dart';
+import 'package:magicraft_wallet/controller/service/wallet.dart';
+import 'package:magicraft_wallet/service/enum/wallet.dart';
 
 String shortenAddress(
   String address, {

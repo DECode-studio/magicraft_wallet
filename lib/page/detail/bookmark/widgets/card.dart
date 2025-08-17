@@ -1,8 +1,8 @@
-import 'package:dompet_ku/controller/page/detail/bookmark.dart';
-import 'package:dompet_ku/model/api/response/bookmark.dart';
-import 'package:dompet_ku/service/value/wallet.dart';
-import 'package:dompet_ku/style/color.dart';
-import 'package:dompet_ku/style/text.dart';
+import 'package:magicraft_wallet/controller/page/detail/bookmark.dart';
+import 'package:magicraft_wallet/model/api/response/bookmark.dart';
+import 'package:magicraft_wallet/service/value/wallet.dart';
+import 'package:magicraft_wallet/style/color.dart';
+import 'package:magicraft_wallet/style/text.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 

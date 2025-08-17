@@ -1,5 +1,5 @@
-import 'package:dompet_ku/model/local/info_page.dart';
-import 'package:dompet_ku/service/router/navigator.dart';
+import 'package:magicraft_wallet/model/local/info_page.dart';
+import 'package:magicraft_wallet/service/router/navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
