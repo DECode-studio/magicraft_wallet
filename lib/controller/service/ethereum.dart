@@ -7,30 +7,8 @@ import 'package:magicraft_wallet/service/value/encrypt.dart';
 import 'package:magicraft_wallet/service/value/guard.dart';
 import 'package:hex/hex.dart';
 import 'package:http/http.dart';
-import 'package:reown_walletkit/reown_walletkit.dart';
 import 'package:web3dart/crypto.dart';
-
-Future<void> errWallerNotLoaded(
-  ReownWalletKit walletKit,
-  String topic,
-) async {
-  final session = AuthAppController.getSession();
-
-  if (session.eth?.publicKey == null || session.eth?.privateKey == null) {
-    final res = JsonRpcResponse(
-      id: 0,
-      error: JsonRpcError(
-        code: -32000,
-        message: 'Ethereum wallet not loaded.',
-      ),
-    );
-
-    return await walletKit.respondSessionRequest(
-      topic: topic,
-      response: res,
-    );
-  }
-}
+import 'package:web3dart/web3dart.dart';
 
 Future<bool> switchChainETH({
   required String chainId,

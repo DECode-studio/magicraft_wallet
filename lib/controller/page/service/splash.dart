@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:magicraft_wallet/controller/service/auth.dart';
-import 'package:magicraft_wallet/controller/service/wallet.dart';
 import 'package:magicraft_wallet/page/modal/password/main.dart';
 import 'package:magicraft_wallet/service/function/interface.dart';
 import 'package:magicraft_wallet/service/router/screen.dart';
@@ -39,7 +38,6 @@ class SplashPageController extends GetxController {
       if (!res) return;
     }
 
-    await WalletAppController.initWalletKit();
     Get.offAllNamed(Screen.MAIN_PAGE_ROUTE);
   }
 }
