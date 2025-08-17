@@ -8,7 +8,7 @@ import 'widgets/screen.dart';
 Future<bool> passwordModal() async {
   final result = await Get.bottomSheet<bool>(
     SizedBox(
-      height: Get.height * 0.6,
+      height: Get.height <= 600 ? Get.height : Get.height * 0.6,
       child: ClipRRect(
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(20),

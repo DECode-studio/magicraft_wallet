@@ -1,35 +1,63 @@
 {
-    "name": "magicraft_wallet",
-    "short_name": "magicraft_wallet",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
-    "prefer_related_applications": false,
-    "icons": [
-        {
-            "src": "icons/Icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-maskable-192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/Icon-maskable-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
+    "manifest_version": 3,
+    "name": "Magicraft Wallet",
+    "version": "1.0.0",
+    "description": "Web3 Wallet built with Flutter Web + Chrome Extension",
+    "icons": {
+        "128": "icons/Icon-128.png",
+        "192": "icons/Icon-192.png",
+        "512": "icons/Icon-512.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "icons": {
+            "128": "icons/Icon-128.png",
+            "192": "icons/Icon-192.png",
+            "512": "icons/Icon-512.png"
         }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "inject.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "scripting",
+        "contextMenus",
+        "clipboardWrite",
+        "clipboardRead",
+        "activeTab",
+        "alarms",
+        "clipboardWrite",
+        "notifications",
+        "scripting",
+        "storage",
+        "unlimitedStorage",
+        "webRequest",
+        "offscreen",
+        "identity"
     ]
 }

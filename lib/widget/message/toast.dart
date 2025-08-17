@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:magicraft_wallet/style/color.dart';
 
-const titleToast = 'Dompet Ku Message';
+const titleToast = 'Magicraft Wallet Message';
 
 void successToast(
   String text,

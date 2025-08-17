@@ -22,7 +22,7 @@ Widget viewPassword(
           height: 10,
         ),
         Text(
-          'This password will unlock your Dompet Ku wallet only on this service',
+          'This password will unlock your Magicraft Wallet wallet only on this service',
           style: normal_15_2,
           textAlign: TextAlign.center,
         ),
@@ -62,7 +62,7 @@ Widget viewPassword(
           ),
           value: controller.agreementChecked.value,
           text:
-              "I understand that Dompet Ku cannot recover this password for me and I agree with all Dompet Ku's ",
+              "I understand that Magicraft Wallet cannot recover this password for me and I agree with all Magicraft Wallet's ",
           linkText: 'Terms and Condition',
           activeColor: thirdColor_1,
           linkStyle: bold_15_5(

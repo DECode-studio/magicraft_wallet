@@ -7,7 +7,6 @@ import 'package:get/get.dart';
 
 import 'widgets/bottom_bar.dart';
 import 'widgets/drawer.dart';
-import 'widgets/fab.dart';
 import 'widgets/screen.dart';
 
 class MainPage extends StatelessWidget {
@@ -29,9 +28,6 @@ class MainPage extends StatelessWidget {
           body: screenPage(controller, size),
           drawer: drawerMenu(controller, size),
           bottomNavigationBar: bottomBar(controller, size),
-          floatingActionButton: fab(controller, size),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerDocked,
         ),
       ),
     );

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetBuilder<CoreAppController>(
       init: CoreAppController(),
       builder: (controller) => GetMaterialApp(
-        title: 'Dompet Ku - most secure and reliable web3 wallet',
+        title: 'Magicraft Wallet - most secure and reliable web3 wallet',
         theme: ThemeData.light(),
         debugShowCheckedModeBanner: false,
         scrollBehavior: MyCustomScrollBehavior(),

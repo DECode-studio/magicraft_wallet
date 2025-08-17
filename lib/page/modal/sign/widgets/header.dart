@@ -40,7 +40,7 @@ Widget headerPage(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Dompet Ku",
+              "Magicraft Wallet",
               style: bold_20_2,
             ),
             Text(

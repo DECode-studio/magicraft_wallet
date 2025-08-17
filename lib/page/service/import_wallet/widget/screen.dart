@@ -107,7 +107,7 @@ Widget screenPage(
                   ),
                   value: controller.agreementChecked.value,
                   text:
-                      "I understand that Dompet Ku cannot recover this password for me and I agree with all Dompet Ku's ",
+                      "I understand that Magicraft Wallet cannot recover this password for me and I agree with all Magicraft Wallet's ",
                   linkText: 'Terms and Condition',
                   activeColor: thirdColor_1,
                   linkStyle: bold_15_5(

@@ -25,7 +25,7 @@ Widget logoApp(
               height: 15,
             ),
             Text(
-              'Dompet Ku',
+              'Magicraft Wallet',
               style: normal_25_5(
                 color: thirdColor_1,
               ),

@@ -137,7 +137,7 @@ class ImportWalletPageController extends GetxController {
               imageAsset: gifSuccess,
               title: 'Congratulations',
               description:
-                  "You've successfully protected your wallet. Remember to keep your seed phrase safe, it's your responsibility!\nDompet Ku cannot recover your wallet should you lose it.",
+                  "You've successfully protected your wallet. Remember to keep your seed phrase safe, it's your responsibility!\nMagicraft Wallet cannot recover your wallet should you lose it.",
               buttonText: 'Done',
               route: Screen.MAIN_PAGE_ROUTE,
             );
