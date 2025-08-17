@@ -1,0 +1,10 @@
+{
+    "status": 200,
+    "message": "File sukses terupload",
+    "data": {
+        "name": "dompet-ku-icon.png",
+        "format": "image/png",
+        "path": "files/images/app/dompet-ku/dompet-ku-icon.png",
+        "url": "https://excitech-id.my.id/files/images/app/dompet-ku/dompet-ku-icon.png"
+    }
+}
