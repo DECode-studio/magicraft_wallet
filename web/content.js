@@ -1,39 +1,93 @@
-// content.js
-// Inject the script into the page and remove tag after load
-const script = document.createElement('script');
-script.src = chrome.runtime.getURL('inject.js');
-script.onload = () => {
-    script.remove();
-};
+console.log("🚀 Content script loaded");
+
+const script = document.createElement("script");
+script.src = chrome.runtime.getURL("inject.js");
+script.onload = () => script.remove();
 (document.head || document.documentElement).appendChild(script);
 
-// Listen messages from injected page script (window.postMessage)
+let flutterHandlerReady = false;
+let messageQueue = [];
+
+function sendToFlutter(msg) {
+    const fn = window.onMessageFromExtension;
+    if (typeof fn === "function") {
+        console.log("➡️ Forwarding to Flutter via onMessageFromExtension", msg);
+        try {
+            fn(JSON.stringify(msg));
+        } catch (err) {
+            console.error("❌ Error calling Flutter handler:", err);
+        }
+    } else {
+        console.warn("⚠️ Flutter handler belum siap, queueing", msg);
+        messageQueue.push(msg);
+    }
+}
+
+const interval = setInterval(() => {
+    if (typeof window.onMessageFromExtension === "function") {
+        if (!flutterHandlerReady) {
+            console.log("✅ Flutter handler terdeteksi, flushing queue...");
+            flutterHandlerReady = true;
+
+            while (messageQueue.length > 0) {
+                const q = messageQueue.shift();
+                sendToFlutter(q);
+            }
+        }
+    }
+}, 500);
+
 window.addEventListener("message", (event) => {
     if (event.source !== window) return;
-    if (event.data?.source !== "FLUTTER_WALLET_REQUEST") return;
 
-    const { id, method, params } = event.data;
+    if (event.data?.source === "FLUTTER_WALLET_REQUEST") {
+        const { id, method, params } = event.data;
+        console.log("📩 DApp request:", event.data);
 
-    // forward to extension background
-    chrome.runtime.sendMessage({ id, method, params }, (response) => {
-        // send back to page (inject.js)
-        window.postMessage({
-            source: "FLUTTER_WALLET_RESPONSE",
-            id,
-            result: response?.result,
-            error: response?.error
-        }, "*");
-    });
+        chrome.runtime.sendMessage({ id, method, params }, (response) => {
+            window.postMessage(
+                {
+                    source: "FLUTTER_WALLET_RESPONSE",
+                    id,
+                    result: response?.result,
+                    error: response?.error,
+                },
+                "*"
+            );
+        });
+    }
+
+    if (event.data?.source === "FLUTTER_WALLET_POPUP_READY") {
+        console.log("✅ Popup ready signal received");
+        chrome.runtime.sendMessage({ type: "popup_ready" });
+    }
 });
 
-// Listen for wallet state updates from background and forward to page (so provider._updateFromWallet can consume)
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    if (msg && msg.type === "wallet_state_update") {
-        window.postMessage({
-            source: "FLUTTER_WALLET_INTERNAL",
-            payload: msg.payload
-        }, "*");
-        // optionally respond to sender
+    if (!msg) return;
+
+    if (msg.type === "wallet_state_update") {
+        window.postMessage(
+            {
+                source: "FLUTTER_WALLET_INTERNAL",
+                payload: msg.payload,
+            },
+            "*"
+        );
         sendResponse && sendResponse({ result: "forwarded" });
+        return;
+    }
+
+    if (msg.type === "wallet_request") {
+        console.log("📩 Got wallet_request from background:", msg);
+
+        sendToFlutter({
+            id: msg.id,
+            method: msg.method,
+            params: msg.params,
+        });
+
+        sendResponse && sendResponse({ result: "forwarded to flutter" });
+        return;
     }
 });

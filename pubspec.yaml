@@ -84,6 +84,7 @@ dependencies:
   eth_sig_util: ^0.0.9
   double_back_to_close: ^2.0.0
   decimal: ^3.2.4
+  js: ^0.7.1
 
 dev_dependencies:
   flutter_test:

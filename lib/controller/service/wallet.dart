@@ -1,7 +1,9 @@
 import 'dart:convert';
 
+import 'package:magicraft_wallet/controller/data/api/network.dart';
 import 'package:magicraft_wallet/controller/service/auth.dart';
 import 'package:magicraft_wallet/controller/service/ethereum.dart';
+import 'package:magicraft_wallet/controller/service/interaction.dart';
 import 'package:magicraft_wallet/model/local/session.dart';
 import 'package:magicraft_wallet/model/local/wallet_request.dart';
 import 'package:magicraft_wallet/page/modal/sign/main.dart';
@@ -13,6 +15,8 @@ import 'package:hex/hex.dart';
 import 'package:web3dart/web3dart.dart';
 
 class WalletAppController extends AuthAppController {
+  static final _networkData = NetworkDataController();
+
   static late final SessionModel? _session;
   static EthPrivateKey? _ethPrivateKey;
 
@@ -24,6 +28,17 @@ class WalletAppController extends AuthAppController {
   static bool isWalletConnected = false;
   static bool isSwitchingNetwork = false;
   static bool isRejected = false;
+
+  static Future<void> init() async {
+    loadWalletFromStorage();
+    listenMessages();
+
+    var listNetwork = await _networkData.getListNeworks();
+    if (listNetwork.isNotEmpty) {
+      final authApp = AuthAppController();
+      await authApp.createListNetwork(listNetwork);
+    }
+  }
 
   static Future<void> loadWalletFromStorage() async {
     final encrypt = EncryptValue();
@@ -75,6 +90,19 @@ class WalletAppController extends AuthAppController {
 
     final result = [_session?.eth?.walletAddress?.first];
     return result;
+  }
+
+  static Future<dynamic> ethChainId(
+    String topic,
+    dynamic params,
+  ) async {
+    if (isRejected) throw Exception('User rejected request');
+
+    final authApp = AuthAppController();
+    final network = authApp.getCurrentNetwork();
+    final chainId = network.chainId ?? "";
+
+    return chainId.split(':').last;
   }
 
   static Future<dynamic> ethSign(

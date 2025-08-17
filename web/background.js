@@ -1,79 +1,123 @@
-// background.js
 const POPUP_METHODS = new Set([
     "eth_chainId",
     "wallet_getPermissions",
     "wallet_revokePermissions",
     "eth_requestAccounts",
-    "wallet_requestPermissions"
+    "wallet_requestPermissions",
 ]);
 
 let popupWindowId = null;
-const pending = {}; // { [id]: { sendResponse, timer } }
+let popupReady = false;
+const pending = {};
+const messageQueue = [];
 
-// simple in-memory wallet state (accounts, chainId)
 const walletState = {
-    accounts: [], // array of hex addresses
-    chainId: null
+    accounts: [],
+    chainId: null,
 };
 
 function openOrFocusPopup() {
-    const url = chrome.runtime.getURL('index.html');
+    const url = chrome.runtime.getURL("index.html");
+
     if (popupWindowId !== null) {
         chrome.windows.update(popupWindowId, { focused: true }, (win) => {
             if (chrome.runtime.lastError || !win) {
-                chrome.windows.create({ url, type: "popup", width: 400, height: 600 }, (w) => {
-                    popupWindowId = w.id;
-                });
+                chrome.windows.create(
+                    { url, type: "popup", width: 400, height: 600 },
+                    (w) => {
+                        if (chrome.runtime.lastError) {
+                            console.warn("Failed to create popup:", chrome.runtime.lastError.message);
+                            return;
+                        }
+                        popupWindowId = w.id;
+                    }
+                );
             }
         });
     } else {
         chrome.windows.create({ url, type: "popup", width: 400, height: 600 }, (w) => {
+            if (chrome.runtime.lastError) {
+                console.warn("Failed to create popup:", chrome.runtime.lastError.message);
+                return;
+            }
             popupWindowId = w.id;
         });
     }
 }
 
 function broadcastState() {
-    // send wallet state to all tabs so content.js can forward to the page
     chrome.tabs.query({}, (tabs) => {
         for (const tab of tabs) {
             if (!tab.id) continue;
-            chrome.tabs.sendMessage(tab.id, { type: "wallet_state_update", payload: { accounts: walletState.accounts, chainId: walletState.chainId } }, () => {
-                // ignore errors (tab may not have content script)
-            });
+            chrome.tabs.sendMessage(
+                tab.id,
+                {
+                    type: "wallet_state_update",
+                    payload: { accounts: walletState.accounts, chainId: walletState.chainId },
+                },
+                () => { }
+            );
         }
     });
 }
 
-// Listen messages from content script (forwarded from page) and from popup UI
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    console.log("Background got:", msg, "from", sender && sender.id);
+function flushQueue() {
+    console.log("✅ Flushing queued messages:", messageQueue.length);
+    chrome.tabs.query({}, (tabs) => {
+        while (messageQueue.length > 0) {
+            const msg = messageQueue.shift();
+            for (const tab of tabs) {
+                if (!tab.id) continue;
+                chrome.tabs.sendMessage(tab.id, msg, () => {
+                    if (chrome.runtime.lastError) {
+                        console.warn("Failed to deliver queued message:", chrome.runtime.lastError.message);
+                    }
+                });
+            }
+        }
+    });
+}
 
-    // If popup UI finished and posts result back: { type: "wallet_popup_response", id, result?, error? }
-    if (msg && msg.type === "wallet_popup_response" && typeof msg.id !== "undefined") {
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    if (!msg) return;
+
+
+    if (msg.type === "popup_ready") {
+        console.log("🎉 Popup ready!");
+        popupReady = true;
+        flushQueue();
+        sendResponse && sendResponse({ result: "ok" });
+        return true;
+    }
+
+
+    if (msg.type === "wallet_popup_response" && typeof msg.id !== "undefined") {
         const entry = pending[msg.id];
-        // Optionally update walletState if popup provided accounts/chainId
         if (msg.result && typeof msg.result === "object") {
-            if (Array.isArray(msg.result.accounts)) {
-                walletState.accounts = msg.result.accounts;
-            }
-            if (typeof msg.result.chainId !== "undefined") {
-                walletState.chainId = msg.result.chainId;
-            }
-            // broadcast new state to tabs/pages
+            if (Array.isArray(msg.result.accounts)) walletState.accounts = msg.result.accounts;
+            if (typeof msg.result.chainId !== "undefined") walletState.chainId = msg.result.chainId;
             broadcastState();
         }
-
         if (entry) {
             clearTimeout(entry.timer);
             entry.sendResponse({ result: msg.result, error: msg.error });
             delete pending[msg.id];
         }
-        return; // no async response expected
+        return true;
     }
 
-    // If UI or other extension code asks to set state directly
-    if (msg && msg.type === "wallet_set_state") {
+
+    if (msg.type === "get_pending_requests") {
+        const list = Object.keys(pending).map((id) => {
+            const p = pending[id];
+            return { id: Number(id), method: p.method, params: p.params };
+        });
+        sendResponse({ requests: list });
+        return true;
+    }
+
+
+    if (msg.type === "wallet_set_state") {
         if (msg.payload) {
             if (Array.isArray(msg.payload.accounts)) walletState.accounts = msg.payload.accounts;
             if (typeof msg.payload.chainId !== "undefined") walletState.chainId = msg.payload.chainId;
@@ -82,49 +126,63 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         } else {
             sendResponse({ error: "missing payload" });
         }
-        return;
+        return true;
     }
 
-    // We expect content to forward `id`, `method`, `params`
-    const { id, method, params } = msg || {};
 
+    const { id, method, params } = msg;
     if (typeof id === "undefined" || !method) {
-        // invalid message; respond with error
         sendResponse({ error: "invalid request" });
-        return;
+        return true;
     }
 
-    // Handle eth_accounts immediately (no popup) - return currently known accounts
+
     if (method === "eth_accounts") {
         sendResponse({ result: walletState.accounts || [] });
-        return;
+        return true;
     }
 
-    // Methods that should open wallet popup (approval flows)
+
     if (POPUP_METHODS.has(method)) {
-        // store pending response until popup replies
         if (pending[id]) {
             sendResponse({ error: "duplicate request id" });
-            return;
+            return true;
         }
 
         pending[id] = {
             sendResponse,
+            method,
+            params,
             timer: setTimeout(() => {
                 if (pending[id]) {
                     pending[id].sendResponse({ error: "timeout waiting for user interaction" });
                     delete pending[id];
                 }
-            }, 60_000) // 60s timeout
+            }, 60_000),
         };
 
         openOrFocusPopup();
 
-        // return true to indicate we'll call sendResponse asynchronously
+        const requestMsg = { type: "wallet_request", id, method, params };
+        if (popupReady) {
+            console.log("✅ Popup ready", requestMsg);
+
+
+            chrome.runtime.sendMessage(requestMsg, () => {
+                if (chrome.runtime.lastError) {
+                    console.warn("Popup message error:", chrome.runtime.lastError.message);
+                }
+            });
+
+        } else {
+            console.log("⏳ Popup not ready, queueing message", requestMsg);
+            messageQueue.push(requestMsg);
+        }
+
         return true;
     }
 
-    // For other methods we forward to UI/background wallet handler (if any)
+
     chrome.runtime.sendMessage({ type: "wallet_request", id, method, params }, (response) => {
         if (chrome.runtime.lastError) {
             sendResponse({ error: chrome.runtime.lastError.message });
@@ -133,5 +191,5 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         }
     });
 
-    return true; // indicate async response
+    return true;
 });
