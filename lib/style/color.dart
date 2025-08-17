@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 // Origin Color
-const purple_1 = Color(0xff301B57);
-const purple_2 = Color(0xff8020EF);
-const purple_3 = Color(0xff9069FF);
+const purple_1 = Color(0xff1A1B2F);
+const purple_2 = Color(0xff57648D);
+const purple_3 = Color(0xff99B4F2);
 
-const blue_1 = Color(0xff0014FF);
-const blue_2 = Color(0xff074CFF);
-const blue_3 = Color(0xff7598EC);
+const blue_1 = Color(0xffF1C40F);
+const blue_2 = Color(0xffD0BD67);
+const blue_3 = Color(0xffF2D399);
 
-const pink_1 = Color(0xffFF2CDF);
-const pink_2 = Color(0xffFF62E6);
-const pink_3 = Color(0xffDFA1ED);
+const pink_1 = Color(0xff6E4B9E);
+const pink_2 = Color(0xff7B6AB5);
+const pink_3 = Color(0xffAC99F2);
 
 const black_1 = Color(0xff000000);
 const black_2 = Color(0xff1C1924);

@@ -26,8 +26,10 @@ Widget cardData(
           spacing: 10,
           children: [
             Text(
-              dateFormater(
-                  DateTime.fromMillisecondsSinceEpoch(data.timestamp ?? 0)),
+              dateDayTimeFormater(
+                DateTime.fromMillisecondsSinceEpoch(
+                    (data.timestamp ?? 0) * 1000),
+              ),
               style: bold_15_5(color: thirdColor_1),
             ),
             textData(
